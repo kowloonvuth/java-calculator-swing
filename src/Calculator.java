@@ -14,7 +14,7 @@ public class Calculator extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Create components
+
         JLabel firstNumberLabel = new JLabel("First Number:");
         firstNumberField = new JTextField(10);
 
@@ -31,14 +31,14 @@ public class Calculator extends JFrame {
         JButton divideButton = new JButton("/");
         JButton clearButton = new JButton("Clear");
 
-        // Add action listeners to buttons
+
         addButton.addActionListener(new OperationListener("+"));
         subtractButton.addActionListener(new OperationListener("-"));
         multiplyButton.addActionListener(new OperationListener("*"));
         divideButton.addActionListener(new OperationListener("/"));
         clearButton.addActionListener(e -> clearFields());
 
-        // Layout components
+
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(6, 2));
         panel.add(firstNumberLabel);
